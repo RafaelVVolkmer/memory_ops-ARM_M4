@@ -78,8 +78,6 @@ MEM_struct_compare_t MEM_compareStructs(const void *struct_a, const void *struct
     if (struct_a == NULL || struct_b == NULL) 
     {
         status_out = COMPARE_BAD_ADDRESS;
-;
-
         goto return_status;
     }
 
@@ -107,8 +105,7 @@ MEM_struct_compare_t MEM_compareStructs(const void *struct_a, const void *struct
         : "r2", "r3", "cc", "memory"
     );
 
-    return_status:
-
+return_status:
     return status_out;
 }
 
@@ -138,7 +135,6 @@ MEM_struct_copy_t MEM_copyStruct(const void *source, void *destine, size_t size)
     if (source == NULL || destine == NULL) 
     {
         status_out = COPY_BAD_ADDRESS;
-
         goto return_status;
     }
     
@@ -153,8 +149,8 @@ MEM_struct_copy_t MEM_copyStruct(const void *source, void *destine, size_t size)
         : "0" (size), "1" (source), "2" (destine)
         : "r2", "cc", "memory"
     );
-    return_status:
-
+    
+return_status:
     return status_out;
 }
 
@@ -183,7 +179,6 @@ MEM_struct_fill_t MEM_fillStruct(void *struct_ptr, size_t size, uint8_t value)
     if (struct_ptr == NULL) 
     {
         status_out = FILL_BAD_ADDRESS;
-
         goto return_status;
     }
 
@@ -199,8 +194,7 @@ MEM_struct_fill_t MEM_fillStruct(void *struct_ptr, size_t size, uint8_t value)
         : "r2", "cc", "memory"
     );
 
-    return_status:
-
+return_status:
     return status_out;
 }
 
