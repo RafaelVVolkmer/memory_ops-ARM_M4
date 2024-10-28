@@ -1,6 +1,6 @@
 /**
- *  @ingroup    memory_ops
- *  @addtogroup memory_ops memory_operations
+ *  @ingroup    MemoryManagement
+ *  @addtogroup MemoryManagement memory_operations
  *  @{
  *
  *  @package    memory_operations
