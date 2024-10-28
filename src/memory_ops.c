@@ -38,13 +38,6 @@
  *       PRIVATE INCLUDE FILES     *
  * ================================*/
 
-/* dependencies: */
-#include <stdlib.h>
-#include <stdio.h>
-#include <stdint.h>
-#include <string.h>
-#include <errno.h>
-
 /* implemented: */
 #include "memory_ops.h"
 
